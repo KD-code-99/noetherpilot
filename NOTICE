@@ -1,0 +1,4 @@
+NoetherPilot's new agent integration is Apache-2.0 licensed.
+The original NOETHER-FORGE package retains its Apache-2.0 license and provenance.
+See vendor/LICENSE, vendor/NOTICE and vendor/PROVENANCE.json.
+No model weights, manuscript corpus, credentials or private research state are distributed.

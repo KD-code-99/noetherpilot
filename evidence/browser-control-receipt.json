@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "problem": {
+    "id": "lyness-symbolic",
+    "variables": [
+      "x",
+      "y",
+      "a"
+    ],
+    "transitions": [
+      "y",
+      "(a+y)/x",
+      "a"
+    ],
+    "parameters": [
+      "a"
+    ],
+    "domain": "Rationals where the original recurrence and candidate are defined",
+    "question": "Find a nonconstant rational state invariant for the declared map, uniformly in the fixed parameter a."
+  },
+  "provider": "deterministic_control",
+  "provider_mode": "DETERMINISTIC_CONTROL",
+  "status": "CERTIFIED_RESULT",
+  "live_runtime_calls": 0,
+  "events": [
+    {
+      "phase": "seed_check",
+      "source": "user_seed",
+      "proposal": {
+        "numerator": "x+y",
+        "denominator": "1",
+        "motivation": "User-supplied seed hypothesis for testing; this is not model output."
+      },
+      "certificate": {
+        "schema_version": 2,
+        "kind": "rational_invariant",
+        "domain": "QQ",
+        "goal": {
+          "id": "lyness-symbolic",
+          "kind": "rational_recurrence",
+          "variables": [
+            "x",
+            "y",
+            "a"
+          ],
+          "transitions": [
+            "y",
+            "(a+y)/x",
+            "a"
+          ],
+          "max_degree": 4,
+          "max_denominator_degree": 2,
+          "parameters": [
+            "a"
+          ],
+          "guards": [],
+          "sources": []
+        },
+        "map_hash": "72143ead46bf0237a4c8fa38829f451dabc0de18d04c4dcefe5e7f89db2baf7c",
+        "numerator": [
+          {
+            "powers": [
+              0,
+              1,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0
+            ],
+            "coefficient": "1"
+          }
+        ],
+        "denominator": [
+          {
+            "powers": [
+              0,
+              0,
+              0
+            ],
+            "coefficient": "1"
+          }
+        ],
+        "required_nonzero_guards": [
+          [
+            {
+              "powers": [
+                1,
+                0,
+                0
+              ],
+              "coefficient": "1"
+            }
+          ]
+        ],
+        "historical_novelty": "UNREVIEWED"
+      },
+      "verification": {
+        "status": "REFUTED",
+        "counterexample": {
+          "x": "1",
+          "y": "0",
+          "a": "0"
+        },
+        "before": "1",
+        "after": "0",
+        "domain_nonzero_guard_count": 1
+      },
+      "status": "REFUTED",
+      "event_id": 1
+    },
+    {
+      "phase": "model_request",
+      "round": 1,
+      "provider": "deterministic_control",
+      "live": false,
+      "event_id": 2
+    },
+    {
+      "phase": "proposal_check",
+      "round": 1,
+      "source": "deterministic_control",
+      "provider_metadata": {
+        "provider": "deterministic_control",
+        "model": null,
+        "live_runtime_call": false
+      },
+      "proposal": {
+        "numerator": "(x+1)*(y+1)*(x+y+a)",
+        "denominator": "x*y",
+        "motivation": "Known Lyness control: test the standard rational invariant after exact refutation of x+y."
+      },
+      "certificate": {
+        "schema_version": 2,
+        "kind": "rational_invariant",
+        "domain": "QQ",
+        "goal": {
+          "id": "lyness-symbolic",
+          "kind": "rational_recurrence",
+          "variables": [
+            "x",
+            "y",
+            "a"
+          ],
+          "transitions": [
+            "y",
+            "(a+y)/x",
+            "a"
+          ],
+          "max_degree": 4,
+          "max_denominator_degree": 2,
+          "parameters": [
+            "a"
+          ],
+          "guards": [],
+          "sources": []
+        },
+        "map_hash": "72143ead46bf0237a4c8fa38829f451dabc0de18d04c4dcefe5e7f89db2baf7c",
+        "numerator": [
+          {
+            "powers": [
+              0,
+              0,
+              1
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              0,
+              1,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              0,
+              1,
+              1
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              0,
+              2,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              0,
+              1
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              1,
+              0
+            ],
+            "coefficient": "2"
+          },
+          {
+            "powers": [
+              2,
+              0,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              1,
+              1
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              1,
+              2,
+              0
+            ],
+            "coefficient": "1"
+          },
+          {
+            "powers": [
+              2,
+              1,
+              0
+            ],
+            "coefficient": "1"
+          }
+        ],
+        "denominator": [
+          {
+            "powers": [
+              1,
+              1,
+              0
+            ],
+            "coefficient": "1"
+          }
+        ],
+        "required_nonzero_guards": [
+          [
+            {
+              "powers": [
+                0,
+                1,
+                1
+              ],
+              "coefficient": "1"
+            },
+            {
+              "powers": [
+                0,
+                2,
+                0
+              ],
+              "coefficient": "1"
+            }
+          ],
+          [
+            {
+              "powers": [
+                1,
+                0,
+                0
+              ],
+              "coefficient": "1"
+            }
+          ],
+          [
+            {
+              "powers": [
+                1,
+                1,
+                0
+              ],
+              "coefficient": "1"
+            }
+          ]
+        ],
+        "historical_novelty": "UNREVIEWED"
+      },
+      "verification": {
+        "status": "CERTIFIED_RATIONAL_INVARIANT",
+        "arithmetic": "exact_rational",
+        "domain_nonzero_guard_count": 3,
+        "historical_novelty": "UNREVIEWED"
+      },
+      "status": "CERTIFIED_RATIONAL_INVARIANT",
+      "event_id": 3
+    }
+  ],
+  "scope": "Supported rational invariants on the declared domain. Known controls do not establish historical novelty. A deterministic control does not satisfy the hackathon platform requirement.",
+  "engine_sha256": {
+    "proofcheck.py": "70ad1879594771576764e31729eb003e78873310dddf6792c1ffefae641478b7",
+    "verifier.py": "631e084f8c43fe43a8c7158af3b939f797809d92d3e25b07f4580b12f9a683dc",
+    "rational.py": "503061e74519069d76d70ace0fc3ba0f8675f12e3349e487f3d92eb4f355760b",
+    "algebra.py": "859619f39ad542608d3d630279ce79c47ae88bd5296814ea0a999334c9f3d2a8"
+  },
+  "elapsed_seconds": 0.092466,
+  "receipt_id": "bbab626bcc42c42ab0d21dad70ad7ea6cd1853e68d120dad2a862ade61cc33df"
+}
