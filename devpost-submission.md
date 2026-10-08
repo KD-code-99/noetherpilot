@@ -1,6 +1,6 @@
 # NoetherPilot: conjecture, refute, refine
 
-Status: draft, not ready for final submission until a real NVIDIA/Nebius run is recorded. Track: Best Apps and Agents. Public source: https://github.com/KD-code-99/noetherpilot (verify after publication). Working test build: whole source checkout/ZIP; run instructions in README.md. Public three-minute YouTube video: pending. media/demo-narrated.mp4 is a labelled software control.
+Status: draft, not ready for final submission until a real NVIDIA/Nebius run is recorded. Track: Best Apps and Agents. Public source: https://github.com/KD-code-99/noetherpilot. Working test build: whole source checkout/ZIP; run instructions in README.md. Public three-minute YouTube video: pending. media/demo-narrated.mp4 is a labelled software control.
 
 ## Inspiration
 
